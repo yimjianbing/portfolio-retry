@@ -58,10 +58,10 @@ export default function CameraAnimation() {
                     scrub: true,
                     markers: true,
                 },
-                duration: 1});
+                duration: 2});
         t1.fromTo(
             cameraTarget,
-            {x: 0.8019640468335975, y: -0.30771398861655985, z: -0.4005187239832815},
+            {x: 0, y: 0, z: 0},
             {x: 1, y: -1, z: -2,
                 ease: "power3.inOut",
                 scrollTrigger: {

@@ -16,8 +16,8 @@ export default function Scene() {
                 {/* <gridHelper args={[100, 100, 0xffffff, 0xffffff]} />
                 <axesHelper args={[100]} /> */}
                 <CameraAnimation />
-                <CameraHelper />
-                <OrbitControls/>
+                {/* <CameraHelper /> */}
+                {/* <OrbitControls/> */}
                 <ambientLight intensity={0.5} />
                 <Suspense fallback={null}>
                     <RoomModel />

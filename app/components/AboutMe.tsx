@@ -33,11 +33,11 @@ export default function AboutMe() {
                 <div className="AboutMeText relative font-extrabold">
                     <div className="text-2xl md:text-3xl text-align-right max-w-[40vw] ">
                         <p>
-                            I'm <span className="text-[#d30154]">Jian Bing</span> I'm a full-stack software engineer. I'm currently a student at the the National University of Singapore where I study Computer Science. 
+                            I&apos;m <span className="text-[#d30154]">Jian Bing</span> I&apos;m a full-stack software engineer. I&apos;m currently a student at the the National University of Singapore where I study Computer Science. 
                         </p>
-                        <p>I'm passionate about creating interactive experiences and solving problems through code. </p>
+                        <p>I&apos;m passionate about creating interactive experiences and solving problems through code. </p>
                         <p>I have experience with full-stack web development and machine learning. </p>
-                        <p>I'm always looking for new opportunities to learn and grow as a developer.</p>
+                        <p>I&apos;m always looking for new opportunities to learn and grow as a developer.</p>
                     </div>
                 </div>
             </div>

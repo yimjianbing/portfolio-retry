@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HelloThere from "./components/HelloThere";
 import AboutMe from "./components/AboutMe";
-import Keyhole from "./components/Keyhole";
+// import Keyhole from "./components/Keyhole";
 import Projects from "./components/Projects";
 
 export default function Home() {
@@ -17,6 +17,6 @@ export default function Home() {
         <Projects/>
         <Footer/>
       </div>
-    
+
   );
 }
