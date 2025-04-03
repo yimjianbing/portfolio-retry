@@ -21,17 +21,17 @@ export default function AboutMe() {
             }
         });
 
-        t1.to(".ProfileCard", {scale: 1, rotateZ: 720, duration: 1});
+        t1.to(".ProfileCard", {scale: 1, rotateZ: 720});
     })
 
     return (
         <div className="AboutMeContainer pt-[30vh] flex flex-row justify-between items-start gap-8">
             <div className="AboutMeContent flex-1">
-                <div className="AboutMeTitle font-extrabold relative top-0 left-0 text-8xl md:text-[10vw]"> 
+                <div className="AboutMeTitle font-display relative top-0 left-0 text-8xl md:text-[10vw]"> 
                     About Me
                 </div>
                 <div className="AboutMeText relative font-extrabold">
-                    <div className="text-2xl md:text-3xl text-align-right max-w-[40vw] ">
+                    <div className="text-2xl md:text-3xl text-align-right max-w-[40vw] font-display cursive">
                         <p>
                             I&apos;m <span className="text-[#d30154]">Jian Bing</span> I&apos;m a full-stack software engineer. I&apos;m currently a student at the the National University of Singapore where I study Computer Science. 
                         </p>

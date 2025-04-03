@@ -4,8 +4,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HelloThere from "./components/HelloThere";
 import AboutMe from "./components/AboutMe";
-// import Keyhole from "./components/Keyhole";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Hackathons from "./components/Hackathons";
 
 export default function Home() {
   return (
@@ -15,8 +16,10 @@ export default function Home() {
         <Scene />
         <AboutMe/>
         <Projects/>
+        <Hackathons/>
+        <Skills/>
         <Footer/>
+     
       </div>
-
   );
 }

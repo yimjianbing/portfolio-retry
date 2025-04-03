@@ -22,8 +22,8 @@ export default function HelloThere() {
             }
         });
 
-        t1.to("#TopHalf", {y: "-100%", duration: 1});
-        t1.to("#BottomHalf", {y: "100%", duration: 1}, "<");
+        t1.to("#TopHalf", {y: "-100%"});
+        t1.to("#BottomHalf", {y: "100%"}, "<");
         // t1.to("#colorScreen", { scale: 0, transformOrigin: "center", duration: 1 });
     }, []);
 
