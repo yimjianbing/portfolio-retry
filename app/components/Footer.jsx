@@ -1,7 +1,7 @@
 'use client';
 
 export default function Footer() {
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const scrollToSection = (e, selector) => {
     e.preventDefault();
     const element = document.querySelector(selector);

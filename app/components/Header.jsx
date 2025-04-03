@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const scrollToSection = (e, selector) => {
     e.preventDefault();
     const element = document.querySelector(selector);
