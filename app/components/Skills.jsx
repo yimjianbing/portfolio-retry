@@ -54,10 +54,10 @@ export default function Skills() {
         <div className="flex items-center justify-center w-full h-full">
           <div>
             <div className="dp_creative">
-              <CharBlock char=".">C</CharBlock>
-              <CharBlock char="R">A</CharBlock>
-              <CharBlock char="E">F</CharBlock>
-              <CharBlock char=".">A</CharBlock>
+              <div char=".">C</div>
+              <div char="R">A</div>
+              <div char="E">F</div>
+              <div char=".">A</div>
               <CharBlock char="T">S</CharBlock>
               <CharBlock char=".">I</CharBlock>
               <CharBlock char="V">R</CharBlock>

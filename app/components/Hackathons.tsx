@@ -3,8 +3,8 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React from 'react';
-gsap.registerPlugin(ScrollTrigger);
 
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hackathons(){
 
@@ -35,7 +35,7 @@ useGSAP(() => {
 
   return (
     <div className="hackathoncontainer font-display relative">
-      <div className="flex pl-5 text-[#d30154] text-8xl md:text-[25vh] font-extrabold ">
+      <div className="flex pl-5 text-[#d30154] font-extrabold ">
         <div className="hackathonleft uppercase font-extrabold tracking-[0.06em] leading-none text-[clamp(30px,8vw,60px)] self-start">
           I have participated in
         </div>
