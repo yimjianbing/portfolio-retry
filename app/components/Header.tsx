@@ -6,53 +6,68 @@ import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const scrollToSection = (e, selector) => {
+    e.preventDefault();
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      console.log(`Scrolling to ${selector}`);
+    } else {
+      console.error(`Element not found: ${selector}`);
+    }
+  };
   return (
     <>
     <div className="fixed inset-0 z-50 bg-black animate-fade-out pointer-events-none" />
 
-    <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-sm  border-gray-200">
+    <header className="fixed z-50 w-[100vw] flex flex-col justify-center items-center border-2 border-white/10 backdrop-blur-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] bg-transparent rounded-[10px] text-[1.5em]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold tracking-tight">
+            <Link href="/" onClick={(e) => scrollToSection(e, ".HelloThereContainer")} className="text-6xl font-display tracking-tight">
               JIAN BING
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 font-display">
             <Link
-              href="#about"
-              className="text-sm font-medium hover:text-gray-600 transition-colors"
+              href="/"
+              onClick={(e) => scrollToSection(e, "#aboutme")}
+              className="text-4xl font-medium hover:text-gray-600 transition-colors"
             >
               About
             </Link>
             <Link
-              href="#projects"
-              className="text-sm font-medium hover:text-gray-600 transition-colors"
+              href="/"
+              onClick={(e) => scrollToSection(e, "#projects")}
+              className="text-4xl font-medium hover:text-gray-600 transition-colors"
             >
               Projects
             </Link>
             <Link
-              href="#skills"
-              className="text-sm font-medium hover:text-gray-600 transition-colors"
+              href="/"
+              onClick={(e) => scrollToSection(e, ".experiencecontainer")}
+              className="text-4xl font-medium hover:text-gray-600 transition-colors"
+            >
+              Experience
+            </Link>
+            <Link
+              href="/"
+              onClick={(e) => scrollToSection(e, "#skills")}
+              className="text-4xl font-medium hover:text-gray-600 transition-colors"
             >
               Skills
             </Link>
-            <Link
-              href="#contact"
-              className="text-sm font-medium hover:text-gray-600 transition-colors"
-            >
-              Contact
-            </Link>
+        
           </nav>
 
           {/* Contact Button */}
           <div className="hidden md:block">
             <Link
               href="#contact"
+              onClick={(e) => scrollToSection(e, ".contactcontainer")}
               className="px-4 py-2 rounded-full bg-accent text-black font-medium text-sm hover:bg-accent/80 transition-colors"
             >
               Get In Touch

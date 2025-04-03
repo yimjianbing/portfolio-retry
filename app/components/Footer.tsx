@@ -1,4 +1,18 @@
+'use client';
+
 export default function Footer() {
+
+  const scrollToSection = (e, selector) => {
+    e.preventDefault();
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      console.log(`Scrolling to ${selector}`);
+    } else {
+      console.error(`Element not found: ${selector}`);
+    }
+  };
+
   return (
     <footer className="relative bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +30,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#about"
+                  href=""
+                  onClick={(e) => scrollToSection(e, "#aboutme")}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   About
@@ -24,7 +39,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href=""
+                  onClick={(e) => scrollToSection(e, "#projects")}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Projects
@@ -32,7 +48,17 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#skills"
+                  href=""
+                  onClick={(e) => scrollToSection(e, ".experiencecontainer")}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Experience
+                </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  onClick={(e) => scrollToSection(e, "#skills")}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Skills
@@ -40,7 +66,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href=""
+                  onClick={(e) => scrollToSection(e, ".contactcontainer")}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contact

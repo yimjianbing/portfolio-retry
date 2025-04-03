@@ -30,7 +30,7 @@ export default function Projects() {
                     // },
                     end: () => "+=" + document.querySelector(".canvascontainer").offsetWidth,
                     end: "+=3000",
-                    markers: true,
+                
                 }
             });
 
@@ -40,7 +40,7 @@ export default function Projects() {
 
 
     return (
-        <div className="projectscontainer h-screen text-align-right ">
+        <div id="projects" className="projectscontainer h-screen text-align-right ">
             <div className="abc font-display top-0 left-0 text-8xl md:text-[10vw] z-10 pt-16 bg-inherit"> 
                 Projects
             </div>

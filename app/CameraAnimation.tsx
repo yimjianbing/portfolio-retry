@@ -32,7 +32,7 @@ export default function CameraAnimation() {
                     start: "top +100",
                     end: "bottom top",
                     scrub: true,
-                    // markers: true,
+                    
                 }});
         t1.fromTo(
             cameraTarget,
@@ -46,7 +46,7 @@ export default function CameraAnimation() {
                     start: "top +100",
                     end: "bottom top",
                     scrub: true,
-                    // markers: true,
+                    
                 }}
                 ,"<"
             );
@@ -54,7 +54,7 @@ export default function CameraAnimation() {
             camera.position,
             {x: 1.5, y: 2, z: 0.5, },
             // {x: 0.33, y: -0.65, z: -2},
-            {x: 2, y: 1, z: 5,
+            {x: 3, y: 1, z: 6,
                 ease: "power3.inOut",
                 immediateRender: false,
                 scrollTrigger: {
@@ -62,35 +62,50 @@ export default function CameraAnimation() {
                     start: "top top",
                     end: "bottom top",
                     scrub: true,
-                    markers: true,
+        
                 }}
             );  
 
+            t1.fromTo(
+                cameraTarget,
+                // {x: 3.5, y: 4, z: 3.5},
+                {x: 0, y: 0, z: 0},
+                {x: -2, y: 0, z: 0, 
+                    ease: "power3.inOut",
+                    immediateRender: false,
+                    scrollTrigger: {
+                        trigger: ".AboutMeContainer",
+                        start: "top +100",
+                        end: "bottom top",
+                        scrub: true,
+                        
+                    }}
+                    ,"<"
+                );
+
         t1.fromTo(
             camera.position,
-            {x: 2, y: 1, z: 5},
+            {x: 3, y: 1, z: 6},
             {x: -0.45, y: -0.4, z: -0.45,
                 ease: "power3.inOut",
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".projectscontainer",
-                    start: "top top",
+                    start: "top center",
                     end: "bottom top",
                     scrub: true,
-                    markers: true,
                 }});
         t1.fromTo(
             cameraTarget,
-            {x: 0, y: 0, z: 0},
+            {x: -2, y: 0, z: 0},
             {x: -0.60, y: -1, z: -0.60,
                 ease: "power3.inOut",
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".projectscontainer",
-                    start: "top top",
+                    start: "top center",
                     end: "bottom top",
                     scrub: true,
-                    markers: true,
                 },
             },
                 "<"
@@ -99,28 +114,26 @@ export default function CameraAnimation() {
         t1.fromTo(
             camera.position,
             {x: -0.45, y: -0.4, z: -0.45,},
-            {x: 0.8019640468335975, y: -0.30771398861655985, z: -0.4005187239832815,
-                ease: "power3.inOut",
+            {x: 0.83, y: -0.4, z: -0.3,
+                ease: "power1.inOut",
                 immediateRender: false,
                 scrollTrigger: {
-                    trigger: ".hackathoncontainer",
+                    trigger: ".experiencecontainer",
                     start: "top bottom",
                     end: "bottom top",
                     scrub: true,
-                    markers: true,
                 }});
         t1.fromTo(
             cameraTarget,
             {x: -0.60, y: -1, z: -0.60,},
-            {x: 1, y: -1, z: -2,
+            {x: 0.8, y: -0.54, z: -2,
                 ease: "power3.inOut",
                 immediateRender: false,
                 scrollTrigger: {
-                    trigger: ".hackathoncontainer",
+                    trigger: ".experiencecontainer",
                     start: "top bottom",
                     end: "bottom top",
                     scrub: true,
-                    markers: true,
                 },
             },
                 "<"
@@ -128,7 +141,7 @@ export default function CameraAnimation() {
 
         t1.fromTo(
             camera.position,
-            {x: 0.8019640468335975, y: -0.30771398861655985, z: -0.4005187239832815,},
+            {x: 0.83, y: -0.4, z: -0.3,},
             {x: 0.66, y: -0.44, z: -0.75,
                 ease: "power3.inOut",
                 immediateRender: false,
@@ -137,11 +150,11 @@ export default function CameraAnimation() {
                     start: "top top",
                     end: "bottom top",
                     scrub: true,
-                    markers: true,
+        
                 }});
         t1.fromTo(
             cameraTarget,
-            {x: 1, y: -1, z: -2,},
+            {x: 0.8, y: -0.54, z: -2,},
             {x: 0.33, y: -0.65, z: -2,
                 ease: "power3.inOut",
                 immediateRender: false,
@@ -150,7 +163,7 @@ export default function CameraAnimation() {
                     start: "top top",
                     end: "bottom top",
                     scrub: true,
-                    markers: true,
+        
                 },
             },
                 "<"

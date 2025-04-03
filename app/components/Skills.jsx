@@ -2,143 +2,102 @@
 
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-const CharBlock = ({ char, children, style }) => (
-    <div data-char={char} style={style}>
-      {children}
-    </div>
-  );
-
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Skills() {
-
+  gsap.registerPlugin(useGSAP);
     useGSAP(() => {
-      gsap.set(".dp_creative div", {yPercent:-103})
-      gsap.set(".dp_creative", {autoAlpha:1})
-      const tl = gsap.timeline({})
-      .to(".dp_creative div", {duration:1, yPercent:0, stagger:0.05, ease:"expo.inOut"})
-      
-      .to(".dp_creative div:not([data-char='.'])", {duration:1, yPercent:103, stagger:0.1, ease:"expo.inOut"})
-    
-      ScrollTrigger.create({
-        trigger:".skillscontainer", 
-        start:"center center",
-        end:"center center",
-        pin:true,
-        markers:true,
-        animation:tl,
-        scrub:true
-        }) 
-    });
+      // gsap.set("[data-text-split]", { opacity: 1})
+      // document.querySelectorAll("[data-text-split]").forEach((el) => {
+      //   new SplitType(el, {
+      //     types: "words, chars",
+      //     tagName: "span",
+      //   });
+      // });
 
+      // document.querySelectorAll("[data-word-slide-up]").forEach((el) => {
+      //   const tl = gsap.timeline({ paused: true });
+      //   tl.from(el.querySelectorAll(".word"), {
+      //     opacity: 0,
+      //     yPercent: 100,
+      //     duration: 0.5,
+      //     ease: "back.out(2)",
+      //     stagger: {amount: 1},
+      //     scrub: true,
+      //   });
+      //   ScrollTrigger.create(el, tl)
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".skillscontainer",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+          // markers: true, 
+          pin: true,
+        },
+      });
+      tl.to(".leftskillscol", { yPercent: -50, ease: "none", opacity: 1 });
+      tl.to(".midskillscol", { yPercent: -130, ease: "none", opacity: 1 }, "<");
+      tl.to(".rightskillscol", { yPercent: -60, ease: "none", opacity: 1 }, "<");
+      tl.to(".skillstitle", {  ease: "none", opacity: 0 }, "<");
+ 
+    });
+  
+  
 
     return (
-        <div className="skillscontainer flex flex-col items-center justify-center h-[500vh] w-screen relative">
-            <div className="skillstitle font-display relative top-0 left-0 text-8xl md:text-[10vw]"> 
+        <div id="skills" className="skillscontainer flex flex-col items-center justify-center h-screen w-screen relative ">
+            <div className="skillstitle text-[#d30154] font-display relative top-0 left-0 text-8xl md:text-[10vw]"> 
                 Skills
             </div>
 
-    <>
+            <div className="container mx-auto px-4 py-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+                <div className="leftskillscol">
+                  <h2 data-text-split="true" data-word-slide-up="true" className="text-3xl text-[#54b9ca] font-bold mb-4">Languages</h2>
+                  <ul className="space-y-2 text-8xl md:text-[8vw] font-display">
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>PostgreSQL</li>
+                  </ul>
+                </div>
 
+                <div className="midskillscol">
+                  <h2 data-text-split="true" data-word-slide-up="true" className="text-3xl text-[#54b9ca] font-bold mb-4">Libraries/Frameworks</h2>
+                  <ul className="space-y-2 text-8xl md:text-[8vw] font-display">
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>FastAPI</li>
+                    <li>Tailwind CSS</li>
+                    <li>GSAP</li>
+                    <li>Three.js</li>
+                    <li>React 3 Fiber</li>
+                    <li>Firebase</li>
+                    <li>MongoDB</li>
+                  </ul>
+                </div>
 
-      {/* Main Container */}
-      <div
-        id="dropdown"
-        className="w-[375px] h-[375px] bg-[#220614] border border-[#64133c] overflow-hidden relative"
-        style={{ '--heading-size': '60px' }}
-      >
-        {/* Inner Wrapper */}
-        <div className="flex items-center justify-center w-full h-full">
-          <div>
-            <div className="dp_creative">
-              <div char=".">C</div>
-              <div char="R">A</div>
-              <div char="E">F</div>
-              <div char=".">A</div>
-              <CharBlock char="T">S</CharBlock>
-              <CharBlock char=".">I</CharBlock>
-              <CharBlock char="V">R</CharBlock>
-              <CharBlock char=".">E</CharBlock>
+                <div className="rightskillscol">
+                  <h2 cdata-text-split="true" data-word-slide-up="true" className="text-3xl text-[#54b9ca] font-bold mb-4">Tools</h2>
+                  <ul className="space-y-2 text-8xl md:text-[8vw] font-display">
+                    <li>Figma</li>
+                    <li>Canva</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>VSCode</li>
+                    <li>Postman</li>
+                  </ul>
+                </div>
+
+              </div>
             </div>
-            <div className="dp_creative">
-              <CharBlock char="C">R</CharBlock>
-              <CharBlock char="O">G</CharBlock>
-              <CharBlock char=".">D</CharBlock>
-              <CharBlock char=".">I</CharBlock>
-              <CharBlock char="N">F</CharBlock>
-              <CharBlock char="." style={{ left: '4px' }}>
-                G
-              </CharBlock>
-            </div>
-          </div>
-        </div>
 
-        {/* Extra styling */}
-        <style>{`
-          .dp_creative {
-            font-family: ui-monospace, Menlo, monospace, sans-serif;
-            visibility: hidden;
-            padding-top: 2px;
-            font-size: var(--heading-size);
-            line-height: 0.79;
-            display: flex;
-            overflow: hidden;
-            padding-bottom: 0;
-            color: #f39;
-          }
-
-          .dp_creative div {
-            display: inline-block;
-            letter-spacing: -0.3vw;
-            position: relative;
-          }
-
-          .dp_creative div::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: attr(data-char);
-            transform: translateY(-103%);
-          }
-        `}</style>
-      </div>
-    </>
-
-            {/* <div className="flex flex-row items-center justify-center w-full ">
-                <div className="w-1/3">
-                    <h2 className="text-3xl">Languages</h2>
-                    <ul>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>Java</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                    </ul>
-                </div>
-                <div className="w-1/3">
-                    <h2 className="text-3xl">Frameworks</h2>
-                    <ul>
-                        <li>React</li>
-                        <li>Next.js</li>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>Flask</li>
-                    </ul>
-                </div>
-                <div className="w-1/3">
-                    <h2 className="text-3xl">Tools</h2>
-                    <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>VSCode</li>
-                        <li>Postman</li>
-                        <li>Adobe XD</li>
-                    </ul>
-                </div>
-            </div> */}
         </div>
     );
 }

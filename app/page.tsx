@@ -6,8 +6,9 @@ import HelloThere from "./components/HelloThere";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Hackathons from "./components/Hackathons";
+import Experience from "./components/Experience";
 import ScrollDownArrow from "./components/ScrollDownArrow";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -19,8 +20,9 @@ export default function Home() {
         <Scene />
         <AboutMe/>
         <Projects/>
-        <Hackathons/>
+        <Experience/>
         <Skills/>
+        <Contact/>
         <Footer/>
      
       </div>
