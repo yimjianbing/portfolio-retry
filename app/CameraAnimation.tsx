@@ -7,7 +7,7 @@ import * as THREE from 'three';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
-const cameraTarget = new THREE.Vector3(0, 0, 0);
+    const cameraTarget = new THREE.Vector3(0.33, -0.65, -2);
 
 export default function CameraAnimation() {
 
@@ -22,7 +22,8 @@ export default function CameraAnimation() {
     useGSAP(() => {
         t1.fromTo(
             camera.position,
-            {x: 3.5, y: 4, z: 3.5},
+            // {x: 3.5, y: 4, z: 3.5},
+            {x: 0.66, y: -0.44, z: -0.75},
             {x: 1.5, y: 2, z: 0.5, 
                 ease: "power3.inOut",
                 immediateRender: false,
@@ -34,9 +35,26 @@ export default function CameraAnimation() {
                     // markers: true,
                 }});
         t1.fromTo(
+            cameraTarget,
+            // {x: 3.5, y: 4, z: 3.5},
+            {x: 0.33, y: -0.65, z: -2},
+            {x: 0, y: 0, z: 0, 
+                ease: "power3.inOut",
+                immediateRender: false,
+                scrollTrigger: {
+                    trigger: ".HelloThereContainer",
+                    start: "top +100",
+                    end: "bottom top",
+                    scrub: true,
+                    // markers: true,
+                }}
+                ,"<"
+            );
+        t1.fromTo(
             camera.position,
-            {x: 1.5, y: 2, z: 0.5},
-            {x: 0.2, y: 0.1, z: 0.5,
+            {x: 1.5, y: 2, z: 0.5, },
+            // {x: 0.33, y: -0.65, z: -2},
+            {x: 2, y: 1, z: 5,
                 ease: "power3.inOut",
                 immediateRender: false,
                 scrollTrigger: {
@@ -45,11 +63,12 @@ export default function CameraAnimation() {
                     end: "bottom top",
                     scrub: true,
                     markers: true,
-                }});  
+                }}
+            );  
 
         t1.fromTo(
             camera.position,
-            {x: 0.2, y: 0.1, z: 0.5},
+            {x: 2, y: 1, z: 5},
             {x: -0.45, y: -0.4, z: -0.45,
                 ease: "power3.inOut",
                 immediateRender: false,
@@ -85,7 +104,7 @@ export default function CameraAnimation() {
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".hackathoncontainer",
-                    start: "top top",
+                    start: "top bottom",
                     end: "bottom top",
                     scrub: true,
                     markers: true,
@@ -98,7 +117,7 @@ export default function CameraAnimation() {
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".hackathoncontainer",
-                    start: "top top",
+                    start: "top bottom",
                     end: "bottom top",
                     scrub: true,
                     markers: true,

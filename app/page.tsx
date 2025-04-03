@@ -7,12 +7,15 @@ import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Hackathons from "./components/Hackathons";
+import ScrollDownArrow from "./components/ScrollDownArrow";
 
 export default function Home() {
   return (
       <div className="h-screen w-screen">
+        
         <Header />
         <HelloThere/>
+        <ScrollDownArrow/>
         <Scene />
         <AboutMe/>
         <Projects/>

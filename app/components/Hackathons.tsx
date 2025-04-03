@@ -1,13 +1,61 @@
-export default function Hackathons() {
-    return (
-        <div className="hackathoncontainer h-screen text-align-right relative">
-            <div className="abc font-display top-0 left-0 text-8xl md:text-[10vw] z-10 bg-inherit w-auto"> 
-                List of Hackathons I&apos;ve Participated In
-            </div>
-            <div className="flex flex-nowrap items-center h-auto [&>.canvas+.canvas]:ml-10 w-fit justify-items-center pl-8 gap-8 pt-8">
+'use client'
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
+gsap.registerPlugin(ScrollTrigger);
 
-            </div>
 
+export default function Hackathons(){
+
+useGSAP(() => {
+    gsap.set("li > span", {transformOrigin:"0 50%"})
+    gsap.set("li:not(:first-of-type) span", {opacity:0.2, scale:0.8})
+
+    const tl = gsap.timeline()
+    .to("li:not(:first-of-type) span", 
+        {opacity:1, scale:1, stagger:0.5}
+        )
+    .to("li:not(:last-of-type) span", 
+        {opacity:0.2, scale:0.8, stagger:0.5}, 0)
+
+
+    ScrollTrigger.create({
+    trigger:".hackathonleft", 
+    start:"center center",
+    endTrigger:"li:last-of-type",
+    end:"center center",
+    pin:true,
+    markers:true,
+    animation:tl,
+    scrub:true
+    }) 
+})
+
+
+  return (
+    <div className="hackathoncontainer font-display relative">
+      <div className="flex pl-5 text-[#d30154] text-8xl md:text-[25vh] font-extrabold ">
+        <div className="hackathonleft uppercase font-extrabold tracking-[0.06em] leading-none text-[clamp(30px,8vw,60px)] self-start">
+          I have participated in
         </div>
-    );
-}
+        <ul className="list-none pl-0 ml-5">
+          {[
+            'Akapowl', 'Jack', 'Cassie', 'Rodrigo', 'Shaun', 'Mitchel',
+            'Craig', 'SHRUG', 'Carl', 'Jonathan', 'Sahil', 'Zach',
+            'Blake', 'Diaco', 'DIPSCOM'
+          ].map((name, index) => (
+            <li
+              key={index}
+              className="snap-center pl-[0.2em] uppercase font-extrabold tracking-[0.06em] leading-none text-[clamp(30px,8vw,60px)]"
+            >
+              <span className="inline-block">{name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+  );
+};
+
