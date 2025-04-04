@@ -68,7 +68,7 @@ const CanvasItem: React.FC<CanvasItemProps> = ({
         <strong className="font-bold text-6xl block -translate-x-[80px] transition-all duration-750 delay-100 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 text-[#d30154] group-hover:translate-x-0 group-hover:opacity-100">
           {title1}
         </strong>
-        <strong className="text-6xl block -translate-x-[80px] transition-all duration-750 delay-200 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 text-[#ffffff] group-hover:translate-x-0 group-hover:opacity-100">
+        <strong className="text-6xl block -translate-x-[80px] transition-all duration-750 delay-200 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 text-[#d30154] group-hover:translate-x-0 group-hover:opacity-100">
           {title2}
         </strong>
         <span className="text-[#d30154] font-thin block -translate-x-[80px] transition-all duration-750 delay-140 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 group-hover:translate-x-0 group-hover:opacity-100">

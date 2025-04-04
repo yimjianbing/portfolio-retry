@@ -49,7 +49,7 @@ export default function Projects() {
                 <CanvasItem navlink="https://gamebling-orbital-24.vercel.app/" imageUrl="/gamebling.png" heading="GameBling" title1="GameBling" title2="" details="Self initiated project for poker beginners" id={2}/>
                 <CanvasItem navLink="https://snaptogether-three.vercel.app/" imageUrl="/snaptogether.png" heading="SnapTogether" title1="SnapTogether" title2="" details="PhotoBooth webapp service with customised frames" id={3}/>
                 <CanvasItem navLink="https://www.linkedin.com/posts/shaun-lee231_i-am-thrilled-to-announce-that-my-team-consisting-activity-7217549823938375680-xQtB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEFLsrwBVynTQtx_tQGTAf4QKnc27Bi3PaU" imageUrl="/turtogatchi.svg" heading="TurtoGotchi" title1="Turtogotchi" title2="" details="Hackathon winning idea turned startup" id={4}/>
-                <CanvasItem imageUrl="/gigspace.png" heading="GigSpace" title1="Frontend" title2="Engineer" details="C2C marketplace for Gig workers" id={5}/>
+                <CanvasItem imageUrl="/vvrs.png" heading="Voiced Video" title1="Voice Video" title2="Recording System" details="Streamline and automate work processes in CPF" id={5}/>
 
             </div>
 

@@ -48,7 +48,7 @@ useGSAP(() => {
             // 'FastAPI', 'Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'Firebase',
             // 'Canva', 'Java', 'JavaScript', 'TypeScript', 'Python', 'HTML',
             // 'CSS', 'Tailwind CSS', 'Git', 'GitHub'
-            'SDG OpenHacks 2024', 'DSTA Code_EXP 2024 ', 'HackNRoll 2025', 'NTU IdeasJam 2024', 'Hack4Good', 'CatalystX 2024'
+            'SDG OpenHacks 2024', 'DSTA Code_EXP 2024 ', 'HackNRoll 2025', 'NTU IdeasJam 2024', 'Hack4Good 2024', 'NES  CatalystX 2024'
           ].map((name, index) => (
             <li
               key={index}
