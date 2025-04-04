@@ -74,12 +74,14 @@ export default function Skills() {
                     <li>Node.js</li>
                     <li>Express</li>
                     <li>FastAPI</li>
+                    <li>HuggingFace</li>
                     <li>Tailwind CSS</li>
                     <li>GSAP</li>
                     <li>Three.js</li>
                     <li>React 3 Fiber</li>
                     <li>Firebase</li>
                     <li>MongoDB</li>
+                    <li>OpenAI API</li>
                   </ul>
                 </div>
 
@@ -91,6 +93,7 @@ export default function Skills() {
                     <li>Git</li>
                     <li>GitHub</li>
                     <li>VSCode</li>
+                    <li>IntelliJ</li>
                     <li>Postman</li>
                   </ul>
                 </div>

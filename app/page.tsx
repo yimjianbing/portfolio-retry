@@ -1,4 +1,3 @@
-
 import Scene from "./components/Scene";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
