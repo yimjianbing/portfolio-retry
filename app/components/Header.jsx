@@ -61,19 +61,15 @@ export default function Header() {
             >
               Skills
             </Link>
-        
-          </nav>
 
-          {/* Contact Button */}
-          <div className="hidden md:block">
             <Link
-              href="#contact"
-              onClick={(e) => scrollToSection(e, ".contactcontainer")}
-              className="px-4 py-2 rounded-full bg-accent text-black font-medium text-sm hover:bg-accent/80 transition-colors"
+              href="/"
+              onClick={(e) => scrollToSection(e, "#contact")}
+              className="text-4xl font-medium hover:text-gray-600 transition-colors"
             >
-              Get In Touch
+              Contact
             </Link>
-          </div>
+          </nav>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -119,15 +115,13 @@ export default function Header() {
             >
               Contact
             </Link>
-            <div className="pt-2">
-              <Link
-                href="#contact"
-                className="block w-full px-4 py-2 text-center rounded-full bg-accent text-black font-medium text-sm"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Get In Touch
-              </Link>
-            </div>
+            <Link
+              href="#contact"
+              className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       )}

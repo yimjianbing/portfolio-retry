@@ -34,12 +34,12 @@ useGSAP(() => {
 
 
   return (
-    <div id="experience" className="experiencecontainer font-display relative pb-[300vh] -pt-[10vh]">
+    <div id="experience" className="experiencecontainer font-display relative pb-[200vh] -pt-[10vh]">
       <div className="experiencetitle font-display relative top-0 left-0 text-8xl md:text-[10vw]"> 
           Experience
       </div>
       <div className="flex pl-5 text-[#d30154] font-extrabold ">
-        <div className="experiencesleft uppercase font-extrabold tracking-[0.06em] leading-none text-[clamp(35px,10vw,70px)] self-start">
+        <div className="experiencesleft uppercase font-extrabold tracking-[0.06em] leading-none text-[clamp(30px,9vw,60px)] self-start">
           I enjoyed competing in hackathons like
         </div>
         <ul className="list-none pl-0 ml-5 text-[#ffffff]">
@@ -52,7 +52,7 @@ useGSAP(() => {
           ].map((name, index) => (
             <li
               key={index}
-              className="snap-center pl-[0.2em] uppercase font-extrabold tracking-[0.06em] leading-none text-[clamp(35px,10vw,70px)]"
+              className="snap-center pl-[0.2em] uppercase font-extrabold tracking-[0.06em] leading-none text-[clamp(30px,9vw,60px)]"
             >
               <span className="inline-block">{name}</span>
             </li>

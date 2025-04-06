@@ -14,7 +14,7 @@ import { useGLTF } from '@react-three/drei'
 export default function RoomModel(props) {
   const { nodes, materials } = useGLTF('/models/room/scene.gltf')
   return (
-    <group {...props} dispose={null}  position={[0.25, -1, 0.25]} scale={0.015}>
+    <group {...props} dispose={null}  position={[0.25, -1, 0.25]} scale={props.scale}>
       <mesh geometry={nodes.Circle_Material_0.geometry} material={materials.Material} position={[41.064, 0, -52.561]} rotation={[-Math.PI / 2, 0, 0]} scale={133.377} />
       <mesh geometry={nodes.Cube012_Material_0.geometry} material={materials.Material} position={[-79.226, 0, 55.047]} rotation={[-Math.PI / 2, 0, 0]} scale={159.054} />
       <mesh geometry={nodes.Cube011_Material_0.geometry} material={materials.Material} position={[-91.067, 0, -88.256]} rotation={[-Math.PI / 2, 0, Math.PI / 2]} scale={10.34} />

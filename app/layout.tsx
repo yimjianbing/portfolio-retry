@@ -25,7 +25,12 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${bebasNeue.variable} antialiased`}
       >
-        <ThemeProvider forcedTheme="dark" attribute="class">{children}</ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" enableSystem 
+          value={{
+            light: "dark",
+            dark: "dark",
+          }}
+        >{children}</ThemeProvider>
       </body>
     </html>
   );

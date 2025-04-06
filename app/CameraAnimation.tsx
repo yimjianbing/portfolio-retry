@@ -147,7 +147,7 @@ export default function CameraAnimation() {
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".skillscontainer",
-                    start: "top top",
+                    start: "top bottom",
                     end: "bottom top",
                     scrub: true,
         
@@ -160,7 +160,7 @@ export default function CameraAnimation() {
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".skillscontainer",
-                    start: "top top",
+                    start: "top bottom",
                     end: "bottom top",
                     scrub: true,
         
