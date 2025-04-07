@@ -53,7 +53,7 @@ export default function Skills() {
 
     return (
         <div id="skills" className="skillscontainer flex flex-col items-center justify-center h-screen w-screen relative ">
-            <div className="skillstitle text-[#d30154] font-display relative top-0 left-0 text-8xl md:text-[10vw]"> 
+            <div className="skillstitle text-[#d30154] text-center font-display relative top-0 left-0 text-8xl md:text-[10vw]"> 
                 Skills
             </div>
 
@@ -64,11 +64,11 @@ export default function Skills() {
       <h2
         data-text-split="true"
         data-word-slide-up="true"
-        className="text-md sm:text-xl md:text-3xl lg:text-4xl text-[#54b9ca] font-bold mb-4"
+        className="text-md sm:text-xl md:text-3xl lg:text-4xl text-center text-[#54b9ca] font-bold mb-4"
       >
         Languages
       </h2>
-      <ul className="space-y-2 text-3xl sm:text-4xl md:text-5xl lg:text-[8vw] font-display">
+      <ul className="space-y-2 text-3xl sm:text-4xl md:text-5xl lg:text-[6.5vw] text-center font-display">
         <li>Python</li>
         <li>JavaScript</li>
         <li>Java</li>
@@ -82,11 +82,11 @@ export default function Skills() {
       <h2
         data-text-split="true"
         data-word-slide-up="true"
-        className="text-md sm:text-xl md:text-3xl lg:text-4xl text-[#54b9ca] font-bold mb-4"
+        className="text-md sm:text-xl md:text-3xl lg:text-4xl text-[#54b9ca] text-center font-bold mb-4"
       >
         Libraries/ <br/> Frameworks
       </h2>
-      <ul className="space-y-2 text-3xl sm:text-4xl md:text-5xl lg:text-[8vw] font-display">
+      <ul className="space-y-2 text-3xl sm:text-4xl md:text-5xl lg:text-[6.5vw] text-center font-display">
         <li>React</li>
         <li>Next.js</li>
         <li>Node.js</li>
@@ -107,11 +107,11 @@ export default function Skills() {
       <h2
         data-text-split="true"
         data-word-slide-up="true"
-        className="text-md sm:text-xl md:text-3xl lg:text-4xl text-[#54b9ca] font-bold mb-4"
+        className="text-md sm:text-xl md:text-3xl lg:text-4xl text-[#54b9ca] text-center font-bold mb-4"
       >
         Tools
       </h2>
-      <ul className="space-y-2 text-3xl sm:text-4xl md:text-5xl lg:text-[8vw] font-display">
+      <ul className="space-y-2 text-3xl sm:text-4xl md:text-5xl lg:text-[6.5vw] text-center font-display">
         <li>Figma</li>
         <li>Canva</li>
         <li>Git</li>

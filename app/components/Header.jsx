@@ -19,14 +19,14 @@ export default function Header() {
   };
   return (
     <>
-    <div className="fixed inset-0 z-50 bg-black animate-fade-out pointer-events-none" />
+    <div className="fixed inset-0 z-50 bg-black animate-fade-out pointer-events-none " />
 
-    <header className="fixed z-50 w-[100vw] flex flex-col justify-between items-center border-2 border-white/10 backdrop-blur-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] bg-transparent rounded-[10px] text-[1.5em]">
+    <header className="fixed z-50 w-[100vw] flex flex-col justify-between items-center border-2 border-white/10 backdrop-blur-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] bg-transparent rounded-[10px] text-[1.5em] ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 mt-2 mb-1">
           {/* Logo/Name */}
           <div className="flex items-center">
-            <Link href="/" onClick={(e) => scrollToSection(e, ".HelloThereContainer")} className="text-[clamp(30px,5vw,6rem)] text-nowrap font-display tracking-tight">
+            <Link href="/" onClick={(e) => scrollToSection(e, ".HelloThereContainer")} className="text-[clamp(30px,5vw,6rem)] text-nowrap font-display tracking-tight ">
               JIAN BING
             </Link>
           </div>

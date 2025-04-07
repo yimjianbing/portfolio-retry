@@ -43,29 +43,29 @@ export default function DesktopSkills() {
 
   });
     return (
-        <div id="skills" className="skillscontainer flex flex-col items-center justify-center h-screen w-screen relative ">
-            <div className="skillstitle text-[#d30154] font-display relative top-0 left-0 text-8xl md:text-[10vw]"> 
-                Skills
-            </div>
+        <div id="skills" className="skillscontainer flex flex-col text-center items-center justify-center h-screen w-screen relative ">
+          <div className="skillstitle text-center text-[#d30154] font-display relative top-0 left-0 text-8xl md:text-[10vw]">
+            Skills
+          </div>
 
             <div className="container mx-auto px-4 py-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         
                 <div className="leftskillscol">
-                  <h2 data-text-split="true" data-word-slide-up="true" className="text-3xl text-[#54b9ca] font-bold mb-4">Languages</h2>
-                  <ul className="space-y-2 text-8xl md:text-[8vw] font-display">
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>PostgreSQL</li>
-                  </ul>
+                  <h2 data-text-split="true" data-word-slide-up="true" className="text-center text-3xl text-[#54b9ca] font-bold mb-4">Languages</h2>
+                  <ul className="space-y-2 text-8xl md:text-[6vw] font-display text-center">
+                  <li className="text-center">Python</li>
+                  <li className="text-center">JavaScript</li>
+                  <li className="text-center">Java</li>
+                  <li className="text-center">HTML</li>
+                  <li className="text-center">CSS</li>
+                  <li className="text-center">PostgreSQL</li>
+                </ul>
                 </div>
 
                 <div className="midskillscol">
-                  <h2 data-text-split="true" data-word-slide-up="true" className="text-3xl text-[#54b9ca] font-bold mb-4">Libraries/Frameworks</h2>
-                  <ul className="space-y-2 text-8xl md:text-[8vw] font-display">
+                  <h2 data-text-split="true" data-word-slide-up="true" className="text-center text-3xl text-[#54b9ca] font-bold mb-4">Libraries/Frameworks</h2>
+                  <ul className="space-y-2 text-8xl md:text-[6vw] font-display text-center">
                     <li>React</li>
                     <li>Next.js</li>
                     <li>Node.js</li>
@@ -83,8 +83,8 @@ export default function DesktopSkills() {
                 </div>
 
                 <div className="rightskillscol">
-                  <h2 cdata-text-split="true" data-word-slide-up="true" className="text-3xl text-[#54b9ca] font-bold mb-4">Tools</h2>
-                  <ul className="space-y-2 text-8xl md:text-[8vw] font-display">
+                  <h2 cdata-text-split="true" data-word-slide-up="true" className="text-center text-3xl text-[#54b9ca] font-bold mb-4">Tools</h2>
+                  <ul className="space-y-2 text-8xl md:text-[6vw] font-display text-center">
                     <li>Figma</li>
                     <li>Canva</li>
                     <li>Git</li>
