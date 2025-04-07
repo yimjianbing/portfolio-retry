@@ -34,7 +34,7 @@ useGSAP(() => {
 
 
   return (
-    <div id="experience" className="experiencecontainer font-display relative pb-[200vh] -pt-[10vh]">
+    <div id="experience" className="experiencecontainer font-display relative pb-[200vh] md:-pt-[10vh] pt-[100vh]">
       <div className="experiencetitle font-display relative top-0 left-0 text-8xl md:text-[10vw]"> 
           Experience
       </div>

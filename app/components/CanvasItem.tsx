@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import { useDevice } from '../DeviceProvider';
 
 interface CanvasItemProps {
   navLink: string;
@@ -24,13 +25,15 @@ const CanvasItem: React.FC<CanvasItemProps> = ({
 
   const orangeGradientId = `grad-orange-${id}`;
   const redGradientId = `grad-red-${id}`;
+
+  const { isMobile } = useDevice();
   
   return (
     <>
    <a href={navLink} 
       target="_blank"
       rel="noopener noreferrer"
-      className="canvasitem relative block w-[640px] h-[360px] p-5 text-inherit no-underline group"
+      className="canvasitem relative block w-[350px] sm:w-[450px] md:w-[640px] h-[200px] sm:h-[270px] md:h-[360px] p-3 md:p-5 text-inherit no-underline group"
       onMouseEnter={(e) => { e.currentTarget.style.zIndex = '1000'; }}
       onMouseLeave={(e) => { e.currentTarget.style.zIndex = '0'; }}
       >
@@ -61,17 +64,17 @@ const CanvasItem: React.FC<CanvasItemProps> = ({
           alt=""
         />
       </div>
-      <div className={`relative bottom-0 ${isLeftAligned ? '-left-[25%]' : 'left-[85%]'} uppercase text-[#000000] z-100`}>
+      <div className={`relative bottom-0 ${ isMobile ? 'left-[05]' : isLeftAligned ? '-left-[25%]' : 'left-[85%]'} uppercase text-[#000000] z-100`}>
         {/* <span className="text-[#54b9ca] block absolute left-0 top-2 text-2xl font-black transform rotate-[270deg] -translate-y-full -translate-x-[calc(100%+80px)] origin-top-left opacity-0 transition-all duration-750 delay-350 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:opacity-100 group-hover:-translate-x-full">
           {heading}
         </span> */}
-        <strong className="font-bold text-6xl block -translate-x-[80px] transition-all duration-750 delay-100 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 text-[#d30154] group-hover:translate-x-0 group-hover:opacity-100">
+        <strong className="font-bold text-2xl md:text-6xl block -translate-x-[80px] transition-all duration-750 delay-100 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 text-[#d30154] group-hover:translate-x-0 group-hover:opacity-100">
           {title1}
         </strong>
-        <strong className="text-6xl block -translate-x-[80px] transition-all duration-750 delay-200 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 text-[#d30154] group-hover:translate-x-0 group-hover:opacity-100">
+        <strong className="text-2xl md:text-6xl -translate-x-[80px] transition-all duration-750 delay-200 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 text-[#d30154] group-hover:translate-x-0 group-hover:opacity-100">
           {title2}
         </strong>
-        <span className="text-[#d30154] font-thin block -translate-x-[80px] transition-all duration-750 delay-140 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
+        <span className="text-[#ffffff] md:text-[#d30154] font-thin block -translate-x-[80px] transition-all duration-750 delay-140 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
           {details}
         </span>
       </div>

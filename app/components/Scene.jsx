@@ -29,14 +29,14 @@ export default function Scene() {
     return (
 
             <Canvas camera={cameraProps} className="Canvas top-0 left-0 w-full h-full" style={{position: "fixed"}}>
-                <gridHelper args={[100, 100, 0xffffff, 0xffffff]} />
-                <axesHelper args={[100]} />
+                {/* <gridHelper args={[100, 100, 0xffffff, 0xffffff]} />
+                <axesHelper args={[100]} /> */}
                 {isMobile ? <MobileCameraAnimation /> : <CameraAnimation />}
                 {/* <CameraHelper /> */}
                 {/* <OrbitControls/> */}
                 <ambientLight intensity={0.5} />
                 <Suspense fallback={null}>
-                    <RoomModel scale={isMobile ? 0.0001 : 0.015}/>
+                    <RoomModel scale={isMobile ? 0.01 : 0.015}/>
                 </Suspense>
             </Canvas>
     );

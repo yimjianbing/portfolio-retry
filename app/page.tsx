@@ -10,6 +10,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import ScrollDownArrow from "./components/ScrollDownArrow";
 import Contact from "./components/Contact";
+import MobileWarning from "./components/MobileWarning";
 import { DeviceProvider } from "./DeviceProvider";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
     <DeviceProvider>
       <div className="h-screen w-screen">
         <Header />
+        <MobileWarning />
         <HelloThere />
         <ScrollDownArrow />
         <Scene />

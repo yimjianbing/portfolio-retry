@@ -1,6 +1,4 @@
 'use client'
-import { useGSAP } from "@gsap/react"
-import { gsap } from "gsap"
 
 import Image from "next/image"
 
@@ -16,23 +14,6 @@ export default function Card({
   author = "Omar Faruq Tawsif",
   backgroundImage = "/Yim Jian Bing.png",
 }: CardProps) {
-
-    useGSAP(() => {
-        gsap.fromTo(
-            "cardcontainer",
-            { x: "0%" },
-            {
-              x: "100%",
-              ease: "none",
-              scrollTrigger: {
-                trigger: "cardcontainer",
-                start: "top 80%", // When the top of the card hits 80% of the viewport height
-                end: "top 30%",   // Animation ends when the top of the card reaches 30%
-                scrub: true,      // Links the animation progress to scroll position
-              },
-            }
-          );
-    })
 
   return (
     <div className={`cardcontainer relative overflow-hidden rounded-3xl max-w-sm`}>
@@ -52,7 +33,7 @@ export default function Card({
         <div className="absolute inset-0 flex flex-col p-8">
           {/* Title */}
           <div className="flex-1">
-            <h1 className="text-white text-7xl sm:text-8xl font-light tracking-tighter">tea</h1>
+            <h1 className="text-white text-7xl sm:text-8xl font-light tracking-tighter">me</h1>
           </div>
 
           {/* Footer */}
