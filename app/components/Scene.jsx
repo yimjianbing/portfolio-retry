@@ -24,7 +24,6 @@ export default function Scene() {
         position: cameraPosition,
         fov: 45, // Optional: adjust FOV for mobile if needed
     };
-    console.log("isMobile", isMobile);
 
     return (
 

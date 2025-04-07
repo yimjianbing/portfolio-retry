@@ -2,8 +2,12 @@
 
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { useDevice } from "../DeviceProvider";
 
 export default function Skills() {
+
+  const { useMobile } = useDevice();
+
   gsap.registerPlugin(useGSAP);
     useGSAP(() => {
       // gsap.set("[data-text-split]", { opacity: 1})
@@ -36,10 +40,13 @@ export default function Skills() {
           pin: true,
         },
       });
-      tl.to(".leftskillscol", { yPercent: -50, ease: "none", opacity: 1 });
-      tl.to(".midskillscol", { yPercent: -130, ease: "none", opacity: 1 }, "<");
-      tl.to(".rightskillscol", { yPercent: -60, ease: "none", opacity: 1 }, "<");
-      tl.to(".skillstitle", {  ease: "none", opacity: 0 }, "<");
+      if (!useMobile) {
+        tl.to(".leftskillscol", { yPercent: -50, ease: "none", opacity: 1 });
+        tl.to(".midskillscol", { yPercent: -130, ease: "none", opacity: 1 }, "<");
+        tl.to(".rightskillscol", { yPercent: -60, ease: "none", opacity: 1 }, "<");
+        tl.to(".skillstitle", {  ease: "none", opacity: 0 }, "<");
+      }
+
  
     });
   

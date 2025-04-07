@@ -23,10 +23,24 @@ export default function AboutMe() {
             }
         });
 
-        t1.fromTo(".ProfileCard", 
-            { yPercent: 100, ease: "none", opacity: 1 },
-            { xPercent: 100, ease: "none", opacity: 1 });
-        
+     t1.from(".ProfileCard", {
+        opacity: 0,
+        scale: 0.8,
+        y: 50,
+        rotation: -15,
+        duration: 0.5,
+        ease: "back.out(1.7)"
+    })
+    .to(".ProfileCard", {
+        scale: 1.05,
+        duration: 0.2,
+        ease: "sine.inOut"
+    })
+    .to(".ProfileCard", {
+        scale: 1,
+        duration: 0.2,
+        ease: "sine.inOut"
+    });
 
         gsap.set("[data-text-split]", { opacity: 1})
 
@@ -71,18 +85,18 @@ export default function AboutMe() {
                     About Me
                 </div>
                 <div className="AboutMeText relative font-extrabold w-auto">
-                    <div className="text-[1vh] md:text-[4vh] text-align-right max-w-screen md:max-w-[40vw] font-display cursive">
-                        <p data-text-split="true" data-word-slide-up="true" className="text-[clamp(15px,4vw,45px)]">
+                    <div className="text-[1vh] md:text-[4vh] text-align-right max-w-screen md:max-w-[45vw] font-display cursive">
+                        <p data-text-split="true" data-word-slide-up="true" className="text-[clamp(15px,4vw,40px)]">
                             I&apos;m <span className="text-[#d30154]">Jian Bing</span>, a full-stack software engineer currently studying Computer Science at the National University of Singapore. 
                         </p>
                         <br />
-                        <p data-text-split="true" data-word-slide-up="true" className="text-[clamp(15px,4vw,45px)]">I&apos;m passionate about creating interactive experiences and solving problems through my knowledge of full-stack web-development. </p>
+                        <p data-text-split="true" data-word-slide-up="true" className="text-[clamp(15px,4vw,40px)]">I&apos;m passionate about creating interactive experiences and solving problems through my knowledge of full-stack web-development. </p>
                     </div>
                 </div>
             </div>
             
             <div className="ProfileCard flex-1 justify-items-end items-end relative">
-                <Card number="01" author="Jian Bing" />
+                {/* <Card number="01" author="Jian Bing" /> */}
             </div>
         </div>
     );
