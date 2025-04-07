@@ -1,7 +1,7 @@
 'use client';
 
-import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef, useState, useEffect } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense, useRef} from "react";
 import RoomModel from "./RoomModel";
 import { OrbitControls} from "@react-three/drei";
 import CameraAnimation from "../CameraAnimation";
@@ -10,7 +10,22 @@ import * as THREE from "three";
 import { useDevice } from "../DeviceProvider";
 import MobileCameraAnimation from "../MobileCameraAnimation";
 
-
+function RotatingModel({ isMobile }) {
+    const groupRef = useRef();
+    
+    // Run on each frame
+    useFrame((state, delta) => {
+      if (isMobile && groupRef.current) {
+        groupRef.current.rotation.y += 0.005;
+      }
+    });
+    
+    return (
+      <group ref={groupRef}>
+        <RoomModel scale={isMobile ? 0.01 : 0.015} />
+      </group>
+    );
+  }
 
 export default function Scene() {
     const { isMobile } = useDevice();
@@ -35,7 +50,7 @@ export default function Scene() {
                 {/* <OrbitControls/> */}
                 <ambientLight intensity={0.5} />
                 <Suspense fallback={null}>
-                    <RoomModel scale={isMobile ? 0.01 : 0.015}/>
+                    <RotatingModel isMobile={isMobile} />
                 </Suspense>
             </Canvas>
     );

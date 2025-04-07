@@ -122,6 +122,7 @@ export default function CameraAnimation() {
                     start: "top bottom",
                     end: "bottom top",
                     scrub: true,
+                    // markers: true,
                 }});
         t1.fromTo(
             cameraTarget,
@@ -147,10 +148,10 @@ export default function CameraAnimation() {
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".skillscontainer",
-                    start: "top bottom",
+                    start: "top center",
                     end: "bottom top",
                     scrub: true,
-        
+                    // markers: true,
                 }});
         t1.fromTo(
             cameraTarget,
@@ -160,7 +161,7 @@ export default function CameraAnimation() {
                 immediateRender: false,
                 scrollTrigger: {
                     trigger: ".skillscontainer",
-                    start: "top bottom",
+                    start: "top center",
                     end: "bottom top",
                     scrub: true,
         

@@ -64,7 +64,7 @@ export default function Header() {
 
             <Link
               href="/"
-              onClick={(e) => scrollToSection(e, "#contact")}
+              onClick={(e) => scrollToSection(e, ".emailme")}
               className="text-[clamp(30px,3vw,4rem)] font-medium hover:text-gray-600 transition-colors"
             >
               Contact
